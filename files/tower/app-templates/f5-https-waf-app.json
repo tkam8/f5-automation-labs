@@ -12,7 +12,12 @@
       "pool": "web_pool",
       "policyWAF": {
         "use": "My_ASM_Policy"
-      }
+      },
+      "securityLogProfiles": [
+                {
+                   "bigip": "/Common/Log all requests"
+                }
+      ]
     },
     "web_pool": {
       "class": "Pool",
@@ -31,7 +36,7 @@
     },
     "My_ASM_Policy": {
       "class": "WAF_Policy",
-      "url": "https://raw.githubusercontent.com/f5devcentral/f5-automation-labs/v4.0/files/asm-policies/demo-asm-policy-linux-high.xml",
+      "url": "https://raw.githubusercontent.com/tkam8/ansible_f5/master/roles/operations/files/asmpolicy/asm-policy-high.xml",
       "ignoreChanges": true
     }
   }
