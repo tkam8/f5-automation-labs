@@ -11,7 +11,7 @@
       "snat": "auto",
       "pool": "web_pool",
       "policyWAF": {
-        "use": "My_ASM_Policy"
+        "use": "My_ASM_Policy2"
       },
       "securityLogProfiles": [
                 {
@@ -34,7 +34,7 @@
         }
       ]
     },
-    "My_ASM_Policy": {
+    "My_ASM_Policy2": {
       "class": "WAF_Policy",
       "url": "https://raw.githubusercontent.com/tkam8/ansible_f5/master/roles/operations/files/asmpolicy/asm-policy-high.xml",
       "ignoreChanges": false
